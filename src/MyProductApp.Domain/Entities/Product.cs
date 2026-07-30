@@ -10,7 +10,7 @@ public class Product
 
     protected Product(){}
 
-    public Product(string name, decimal price, string description)
+    public Product(string name, decimal price, string description, DateTime createdAt)
     {
         if(string.IsNullOrWhiteSpace(name)) throw new ArgumentException("Name is required", nameof(name));
         if(price < 0) throw new ArgumentException("Price must be >= 0", nameof(price));
@@ -19,6 +19,7 @@ public class Product
         Name = name;
         Price = price;
         Description = description;
+        CreatedAt = createdAt;
     }
 
     public void UpdatePrice(decimal newPrice)
