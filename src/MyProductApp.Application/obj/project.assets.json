@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "MyProductApp.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MyProductApp.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyProductApp.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MyProductApp.Domain/1.0.0": {
+      "type": "project",
+      "path": "../MyProductApp.Domain/MyProductApp.Domain.csproj",
+      "msbuildProject": "../MyProductApp.Domain/MyProductApp.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "MyProductApp.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Jefferson\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Jefferson\\Documents\\GitHub\\study-clean-architecture-dotnet8-cqrs\\src\\MyProductApp.Application\\MyProductApp.Application.csproj",
+      "projectName": "MyProductApp.Application",
+      "projectPath": "C:\\Users\\Jefferson\\Documents\\GitHub\\study-clean-architecture-dotnet8-cqrs\\src\\MyProductApp.Application\\MyProductApp.Application.csproj",
+      "packagesPath": "C:\\Users\\Jefferson\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jefferson\\Documents\\GitHub\\study-clean-architecture-dotnet8-cqrs\\src\\MyProductApp.Application\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Jefferson\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "C:\\Users\\Jefferson\\Documents\\GitHub\\study-clean-architecture-dotnet8-cqrs\\src\\MyProductApp.Domain\\MyProductApp.Domain.csproj": {
+              "projectPath": "C:\\Users\\Jefferson\\Documents\\GitHub\\study-clean-architecture-dotnet8-cqrs\\src\\MyProductApp.Domain\\MyProductApp.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.414/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
