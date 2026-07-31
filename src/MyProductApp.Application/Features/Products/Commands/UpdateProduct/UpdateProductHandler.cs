@@ -24,9 +24,6 @@ public class UpdateProductHandler : IRequestHandler<UpdateProductCommand, Produc
             request.Price,
             request.Description
         );
-        product.UpdateName(request.Name);
-        product.UpdatePrice(request.Price);
-        
 
         await _repository.UpdateAsync(product, cancellationToken);
 
