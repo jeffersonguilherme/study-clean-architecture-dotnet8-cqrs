@@ -1,4 +1,4 @@
-using MediatR;
+    using MediatR;
 using MyProductApp.Application.DTOs;
 using MyProductApp.Application.Interfaces.Repositories;
 
@@ -19,6 +19,11 @@ public class UpdateProductHandler : IRequestHandler<UpdateProductCommand, Produc
         if(product is null)
             throw new ArgumentException("Product not found");
 
+        product.Update(
+            request.Name,
+            request.Price,
+            request.Description
+        );
         product.UpdateName(request.Name);
         product.UpdatePrice(request.Price);
         

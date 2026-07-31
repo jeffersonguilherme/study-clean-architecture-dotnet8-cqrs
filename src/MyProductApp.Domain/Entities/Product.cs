@@ -7,6 +7,7 @@ public class Product
     public string Description { get; private set; } = string.Empty;
     public decimal Price { get; private set; }
     public DateTime CreatedAt { get; private set; }
+    public DateTime? UpdateAt { get; private set; }
 
     protected Product(){}
 
@@ -22,6 +23,17 @@ public class Product
         CreatedAt = DateTime.UtcNow;
     }
 
+    public void Update(string name, decimal newPrice, string description)
+    {
+        if(string.IsNullOrWhiteSpace(name)) throw new ArgumentException("Name is required", nameof(name));
+        if(newPrice < 0) throw new ArgumentException("Price must be >= 0", nameof(newPrice));
+        if(string.IsNullOrWhiteSpace(description)) throw new ArgumentException("Description is required", nameof(description));
+
+        Name = name;
+        Price = newPrice;
+        Description = description;
+        UpdateAt = DateTime.UtcNow;
+    }
     public void UpdatePrice(decimal newPrice)
     {
         if(newPrice < 0) throw new ArgumentException("Price must be >= 0");
