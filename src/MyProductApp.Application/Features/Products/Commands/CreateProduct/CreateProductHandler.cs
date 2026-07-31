@@ -7,9 +7,9 @@ namespace MyProductApp.Application.Features.Products.Commands.CreateProduct;
 
 public class CreateproductHandler : IRequestHandler<CreateProductCommand, ProductResponseDto>
 {
-    private readonly IPoductRepository _repository;
+    private readonly IProductRepository _repository;
 
-    public CreateproductHandler(IPoductRepository repository)
+    public CreateproductHandler(IProductRepository repository)
     {
         _repository = repository;
     }

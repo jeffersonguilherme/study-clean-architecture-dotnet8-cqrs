@@ -2,7 +2,7 @@ using MyProductApp.Domain.Entities;
 
 namespace MyProductApp.Application.Interfaces.Repositories;
 
-public interface IPoductRepository
+public interface IProductRepository
 {
     Task<Product?> GetByIdAsync(Guid id, CancellationToken ct = default);
     Task AddAsync(Product product, CancellationToken ct = default);

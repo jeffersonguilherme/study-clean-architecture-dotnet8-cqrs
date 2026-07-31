@@ -3,7 +3,7 @@ namespace MyProductApp.Domain.Entities;
 public class Product
 {
     public Guid Id { get; private set; }
-    public string Name { get; set; } = string.Empty;
+    public string Name { get; private set; } = string.Empty;
     public string Description { get; private set; } = string.Empty;
     public decimal Price { get; private set; }
     public DateTime CreatedAt { get; private set; }
