@@ -1,0 +1,12 @@
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Domain\bin\Debug\net8.0\MyProductApp.Domain.deps.json
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Domain\bin\Debug\net8.0\MyProductApp.Domain.dll
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Domain\bin\Debug\net8.0\MyProductApp.Domain.pdb
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Domain\obj\Debug\net8.0\MyProductApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Domain\obj\Debug\net8.0\MyProductApp.Domain.AssemblyInfoInputs.cache
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Domain\obj\Debug\net8.0\MyProductApp.Domain.AssemblyInfo.cs
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Domain\obj\Debug\net8.0\MyProductApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Domain\obj\Debug\net8.0\MyProductApp.Domain.sourcelink.json
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Domain\obj\Debug\net8.0\MyProductApp.Domain.dll
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Domain\obj\Debug\net8.0\refint\MyProductApp.Domain.dll
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Domain\obj\Debug\net8.0\MyProductApp.Domain.pdb
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Domain\obj\Debug\net8.0\ref\MyProductApp.Domain.dll

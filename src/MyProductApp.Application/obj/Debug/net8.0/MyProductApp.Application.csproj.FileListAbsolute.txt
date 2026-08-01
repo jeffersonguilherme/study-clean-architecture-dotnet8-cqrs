@@ -1,0 +1,16 @@
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\bin\Debug\net8.0\MyProductApp.Application.deps.json
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\bin\Debug\net8.0\MyProductApp.Application.dll
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\bin\Debug\net8.0\MyProductApp.Application.pdb
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\bin\Debug\net8.0\MyProductApp.Domain.dll
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\bin\Debug\net8.0\MyProductApp.Domain.pdb
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\obj\Debug\net8.0\MyProductApp.Application.csproj.AssemblyReference.cache
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\obj\Debug\net8.0\MyProductApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\obj\Debug\net8.0\MyProductApp.Application.AssemblyInfoInputs.cache
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\obj\Debug\net8.0\MyProductApp.Application.AssemblyInfo.cs
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\obj\Debug\net8.0\MyProductApp.Application.csproj.CoreCompileInputs.cache
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\obj\Debug\net8.0\MyProductApp.Application.sourcelink.json
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\obj\Debug\net8.0\MyProduc.86FCC9E2.Up2Date
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\obj\Debug\net8.0\MyProductApp.Application.dll
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\obj\Debug\net8.0\refint\MyProductApp.Application.dll
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\obj\Debug\net8.0\MyProductApp.Application.pdb
+C:\Users\Jefferson\Documents\GitHub\study-clean-architecture-dotnet8-cqrs\src\MyProductApp.Application\obj\Debug\net8.0\ref\MyProductApp.Application.dll
