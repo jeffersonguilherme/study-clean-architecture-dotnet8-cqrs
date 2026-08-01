@@ -6,7 +6,7 @@ namespace MyProductApp.Application.Features.Queries.GetProductById;
 
 public class GetProductByIdHandler : IRequestHandler<GetProductByIdQuery, ProductResponseDto>
 {
-    protected readonly IProductRepository _repository;
+    private readonly IProductRepository _repository;
 
     public GetProductByIdHandler(IProductRepository repository)
     {
