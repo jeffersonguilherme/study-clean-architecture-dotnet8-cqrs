@@ -15,23 +15,61 @@ O **MyProductApp** é uma API para cadastro, consulta, atualização e exclusão
 - **Application** — casos de uso via CQRS (Commands/Queries + Handlers), DTOs, validações e contratos de repositório
 - **Infrastructure** — implementação de persistência com EF Core (`AppDbContext`, `ProductRepository`)
 - **Api** — controllers HTTP finos, apenas delegando ao `IMediator`
+  
 ## 🏗️ Arquitetura
  
 ```
 MyProductApp/
 └── src/
-    ├── MyProductApp.Api/              → Controllers, Program.cs, configuração da aplicação
-    ├── MyProductApp.Application/      → Features (Commands/Queries), DTOs, Interfaces, Validators
-    │   └── Features/
-    │       └── Products/
-    │           ├── Commands/
-    │           │   ├── CreateProduct/
-    │           │   └── UpdateProduct/
-    │           └── Queries/
-    │               └── GetProductById/
-    ├── MyProductApp.Domain/           → Entidades (Product) e regras de domínio
-    ├── MyProductApp.Infrastructure/   → AppDbContext, Repositories (EF Core)
-    └── MyProductApp.sln
+    ├── MyProductApp.Api/
+    │   ├── Controllers/
+    │   ├── Properties/
+    │   ├── Program.cs
+    │   ├── appsettings.json
+    │   ├── appsettings.Development.json
+    │   └── MyProductApp.Api.csproj
+    │
+    ├── MyProductApp.Application/
+    │   ├── DTOs/
+    │   │   ├── CreateProductDto.cs
+    │   │   └── ProductResponseDto.cs
+    │   ├── Features/
+    │   │   └── Products/
+    │   │       ├── Commands/
+    │   │       │   ├── CreateProduct/
+    │   │       │   │   ├── CreateProductCommand.cs
+    │   │       │   │   ├── CreateProductHandler.cs
+    │   │       │   │   └── CreateProductValidator.cs
+    │   │       │   └── UpdateProduct/
+    │   │       │       ├── UpdateProductCommand.cs
+    │   │       │       ├── UpdateProductHandler.cs
+    │   │       │       └── UpdateProductValidator.cs
+    │   │       └── Queries/
+    │   │           └── GetProductById/
+    │   │               ├── GetProductByIdQuery.cs
+    │   │               └── GetProductByIdHandler.cs
+    │   ├── Interfaces/
+    │   │   └── Repositories/
+    │   │       └── IProductRepository.cs
+    │   └── MyProductApp.Application.csproj
+    │
+    ├── MyProductApp.Domain/
+    │   ├── Entities/
+    │   │   └── Product.cs
+    │   └── MyProductApp.Domain.csproj
+    │
+    ├── MyProductApp.Infrastructure/
+    │   ├── Migrations/
+    │   │   ├── {timestamp}_InitialCreate.cs
+    │   │   └── AppDbContextModelSnapshot.cs
+    │   ├── Persistence/
+    │   │   └── AppDbContext.cs
+    │   ├── Repositories/
+    │   │   └── ProductRepository.cs
+    │   └── MyProductApp.Infrastructure.csproj
+    │
+    ├── MyProductApp.sln
+    └── README.md
 ```
  
 **Fluxo de uma requisição:** `Controller` → `IMediator.Send()` → `Handler` (Application) → `IProductRepository` (Infrastructure) → `AppDbContext` (EF Core / SQLite)
