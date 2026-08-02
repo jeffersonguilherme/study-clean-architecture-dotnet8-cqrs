@@ -13,7 +13,7 @@ public class IdentityService : IIdentityService
         _userManager = userManager;
     }
 
-    public async Task<(bool Succeded, Guid? UserId, IEnumerable<string> Errors)> RegisterUserAsync(string email, string password, string role, CancellationToken ct = default)
+    public async Task<(bool Succeeded, Guid? UserId, IEnumerable<string> Errors)> RegisterUserAsync(string email, string password, string role, CancellationToken ct = default)
     {
         var user = new ApplicationUser
         {

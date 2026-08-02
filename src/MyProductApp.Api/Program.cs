@@ -1,9 +1,11 @@
 using System.Reflection;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using MyProductApp.Application.Interfaces.Identity;
 using MyProductApp.Application.Interfaces.Repositories;
 using MyProductApp.Infrastructure.Persistence;
 using MyProductApp.Infrastructure.Repositories;
+using MyProductApp.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,8 @@ options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")
 
 //Repositories
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IMatriculaRoleRepository, MatriculaRoleRepository>();
+builder.Services.AddScoped<IIdentityService, IdentityService>();
 
 //MediatR
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.Load("MyProductApp.Application")));
