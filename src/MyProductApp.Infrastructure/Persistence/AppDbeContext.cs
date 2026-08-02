@@ -1,11 +1,14 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyProductApp.Domain.Entities;
+using MyProductApp.Infrastructure.Identity;
 
 namespace MyProductApp.Infrastructure.Persistence;
 
-public class AppDbContext : DbContext
+public class AppDbContext : IdentityDbContext<ApplicationUser>
 {
     public DbSet<Product> Products { get; set; } = null!;
+    public DbSet<MatriculaRole> MatriculaRoles { get; set; }
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options){}
        protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
