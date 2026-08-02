@@ -1,7 +1,9 @@
 using System.Reflection;
 using FluentValidation;
+using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using MyProductApp.Application.Common.Behaviors;
 using MyProductApp.Application.Interfaces.Identity;
 using MyProductApp.Application.Interfaces.Repositories;
 using MyProductApp.Infrastructure.Identity;
@@ -47,6 +49,10 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     //Regra de Usuário
     options.User.RequireUniqueEmail = true;
 }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
+
+//Validation Behavior
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
 var app = builder.Build();
 
