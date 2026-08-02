@@ -1,8 +1,10 @@
 using System.Reflection;
 using FluentValidation;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MyProductApp.Application.Interfaces.Identity;
 using MyProductApp.Application.Interfaces.Repositories;
+using MyProductApp.Infrastructure.Identity;
 using MyProductApp.Infrastructure.Persistence;
 using MyProductApp.Infrastructure.Repositories;
 using MyProductApp.Infrastructure.Services;
@@ -28,14 +30,23 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//MediatR
-builder.Services.AddMediatR(x =>
-{
-    x.RegisterServicesFromAssembly(typeof(IProductRepository).Assembly);
-});
 
 //FluentValidation
 builder.Services.AddValidatorsFromAssembly(typeof(IProductRepository).Assembly);
+
+//Identity
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+{
+    //Regras de senha
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase =true;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequiredLength = 6;
+
+    //Regra de Usuário
+    options.User.RequireUniqueEmail = true;
+}).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
 var app = builder.Build();
 
