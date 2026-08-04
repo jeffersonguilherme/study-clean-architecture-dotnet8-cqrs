@@ -1402,7 +1402,8 @@
           "Microsoft.EntityFrameworkCore": "8.0.11",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.11",
           "MyProductApp.Application": "1.0.0",
-          "MyProductApp.Domain": "1.0.0"
+          "MyProductApp.Domain": "1.0.0",
+          "System.IdentityModel.Tokens.Jwt": "8.22.0"
         },
         "compile": {
           "bin/placeholder/MyProductApp.Infrastructure.dll": {}

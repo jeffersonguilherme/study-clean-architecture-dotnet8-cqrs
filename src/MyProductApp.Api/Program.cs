@@ -9,7 +9,7 @@ using MyProductApp.Application.Interfaces.Repositories;
 using MyProductApp.Infrastructure.Identity;
 using MyProductApp.Infrastructure.Persistence;
 using MyProductApp.Infrastructure.Repositories;
-using MyProductApp.Infrastructure.Services;
+using MyProductApp.Infrastructure.Services.Auth;
 
 var builder = WebApplication.CreateBuilder(args);
 
