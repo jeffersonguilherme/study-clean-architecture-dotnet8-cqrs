@@ -1,5 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using MyProductApp.Application.Features.Auth.Commands.Login;
 using MyProductApp.Application.Features.Auth.Commands.RegisterUser;
 
 namespace MyProductApp.Api.Controllers;
@@ -17,6 +18,13 @@ public class AuthController : ControllerBase
 
     [HttpPost("register")]
     public async Task<IActionResult> Register(RegisterUserCommand command, CancellationToken ct)
+    {
+        var result = await _mediator.Send(command, ct);
+        return Ok(result);
+    }
+
+    [HttpPost("login")]
+    public async Task<IActionResult> Login(LoginCommand command , CancellationToken ct)
     {
         var result = await _mediator.Send(command, ct);
         return Ok(result);
