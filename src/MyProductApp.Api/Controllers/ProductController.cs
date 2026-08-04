@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MyProductApp.Application.Features.Products.Commands.CreateProduct;
 using MyProductApp.Application.Features.Queries.GetProductById;
@@ -17,6 +18,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> CreateProduct([FromBody] CreateProductCommand cmd)
     {
         var dto = await _mediator.Send(cmd);
