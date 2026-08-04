@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using MyProductApp.Application.Interfaces.Identity;
 using MyProductApp.Infrastructure.Identity;
 
-namespace MyProductApp.Infrastructure.Services;
+namespace MyProductApp.Infrastructure.Services.Auth;
 
 public class IdentityService : IIdentityService
 { 
@@ -29,5 +29,21 @@ public class IdentityService : IIdentityService
         await _userManager.AddToRoleAsync(user, role);
 
         return (true, Guid.Parse(user.Id), Enumerable.Empty<string>());
+    }
+
+    public async Task<(bool Succeeded, Guid? UserId, string? Email, IEnumerable<string> Roles)> ValidateCredentialsAsync(string email, string password, CancellationToken ct = default)
+    {
+        var user = await _userManager.FindByEmailAsync(email);
+        if(user is null)
+            return (false, null, null, Enumerable.Empty<string>());
+        
+        var passwordValid = await _userManager.CheckPasswordAsync(user, password);
+        
+        if(!passwordValid)
+            return (false, null, null, Enumerable.Empty<string>());
+
+        var roles = await _userManager.GetRolesAsync(user);
+
+        return (true, Guid.Parse(user.Id), user.Email, roles);
     }
 }
